@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js</title>
+    <!-- <script src="vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- or -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js" integrity="sha512-Idr7xVNnMWCsgBQscTSCivBNWWH30oo/tzYORviOCrLKmBaRxRflm2miNhTFJNVmXvCtzgms5nlJF4az2hiGnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+    <!-- <div id="app"> -->
+        <!-- <p>{{ title }}</p>
+        <p>{{ message }}</p>
+        <p>{{ cars[2] }}</p>
+        <p>{{ robot.name }}</p>
+        <p>{{ greeting() }}</p>
+        <p>{{ green_view() }}</p>
+        <p>{{ red_view() }}</p>
+        <img :src="image[0]" :alt="message">
+        <p v-text="message"></p>
+        <p v-html="myHtml"></p>
+        <p v-if="userName === 'babazahidul'">Baba Zahidul</p>
+        <p v-else-if="userName === 'mailzahidul'">Mail Zahidul</p>
+        <p v-else>Nothing</p>
+        <p v-if="match()">Match</p>
+
+        <p v-show="userName === 'mailzahidul'">Show it</p>
+        <p v-show="userName != 'mailzahidul'">Don't Show it</p> -->
+        <!-- <div>
+            <p v-for="(list, i) in lists">{{i}}. {{ list }}</p>
+        </div>
+        <div>
+            <p v-for="(value, key, i) in objs">{{i}}. {{key}}: {{ value }}</p>
+        </div> -->
+    <!-- </div> -->
+    
+    <div id="app">
+        <h1>Bitcoin Price Index</h1>
+      
+        <section v-if="errored">
+          <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
+        </section>
+      
+        <section v-else>
+          <div v-if="loading">Loading...</div>
+      
+          <div v-else v-for="currency in info" class="currency">
+            {{ currency.description }}:
+            <span class="lighten">
+              <span v-html="currency.symbol"></span>{{ currency.rate_float | currencydecimal }}
+            </span>
+          </div>
+      <p>{{info}}</p>
+        </section>
+
+      <p>{{name}}</p>
+      <button v-on:click="changeName()">Click Here</button> 
+      
+      <form v-on:submit.prevent="formHandle" action="">
+        <input type="text">
+        <button type="submit">Submit</button>
+      </form>
+
+      </div>
+
+
+    
+
+<script src="app.js"></script>
+
+</body>
+</html>
